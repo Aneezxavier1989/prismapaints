@@ -32,7 +32,7 @@ const NAV_LINKS = [
   { name: 'Paints & Coatings', items: ['Architectural', 'Industrial', 'Thinners', 'Track & Road', 'Specialty Coatings'] },
   { name: 'Services', items: ['Safe Painting Service', 'Color Consultancy', 'Industrial Coatings', 'Surface Preparation'] },
   { name: 'Solutions', items: ['Waterproofing', 'Heat Reflective', 'Anti-Corrosive', 'Road Marking'] },
-  { name: 'Inspiration', items: ['Color Visualizer', 'Decor Ideas', 'Expert Tips', 'Case Studies'] },
+  { name: 'Inspiration', items: ['Visualize Color', 'Decor Ideas', 'Expert Tips', 'Case Studies'] },
 ];
 
 const SERVICES = [
@@ -159,9 +159,21 @@ export default function App() {
             initial={{ x: '100%' }}
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
-            className="fixed inset-0 z-[60] bg-white pt-24 px-6 lg:hidden"
+            className="fixed inset-0 z-[60] bg-white pt-6 px-6 lg:hidden overflow-y-auto"
           >
-            <div className="flex flex-col gap-8">
+            <div className="flex justify-between items-center mb-12">
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 rounded-lg bg-red-600 flex items-center justify-center text-white font-bold text-lg">P</div>
+                <span className="text-xl font-black tracking-tighter text-slate-900">PRISMA<span className="text-red-600"> PAINTS</span></span>
+              </div>
+              <button 
+                onClick={() => setIsMenuOpen(false)}
+                className="p-2 text-slate-900 hover:bg-slate-100 rounded-full transition-colors"
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+            <div className="flex flex-col gap-8 pb-12">
               {NAV_LINKS.map((link) => (
                 <div key={link.name}>
                   <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">{link.name}</h3>
@@ -181,8 +193,8 @@ export default function App() {
         {/* Hero Section */}
         <section className="relative h-[70vh] md:h-[80vh] overflow-hidden">
           <img 
-            src="https://www.prismapaints.com/wp-content/uploads/2022/09/1920x1080-03.jpg" 
-            alt="Vibrant Living Room with Yellow Sofa" 
+            src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1920" 
+            alt="Elegant Modern Living Room Decor" 
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
           />
@@ -302,8 +314,8 @@ export default function App() {
           </div>
           <div className="max-w-7xl mx-auto px-6 relative z-10">
             <div className="max-w-xl">
-              <span className="text-red-500 font-bold uppercase tracking-widest text-sm mb-4 block">Digital Tools</span>
-              <h2 className="text-5xl font-black mb-8 leading-tight">Visualize Your Dream Home in Real-Time</h2>
+              <span className="text-red-500 font-bold uppercase tracking-widest text-sm mb-4 block">Visualize Colors</span>
+              <h2 className="text-5xl font-black mb-8 leading-tight">Visualize Our Colors on Walls</h2>
               <p className="text-xl text-slate-400 mb-12 font-light">
                 Try out thousands of colors instantly to visualize the room color.
               </p>
@@ -323,13 +335,13 @@ export default function App() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                { title: 'The Rise of Earthy Tones', category: 'Trends 2026', seed: 'earthy-paint-trends' },
-                { title: 'Choosing the Right Finish', category: 'Expert Advice', seed: 'paint-finish-texture' },
-                { title: 'Modern Minimalist Living', category: 'Decor Ideas', seed: 'minimalist-interior-paint' },
+                { title: 'The Rise of Earthy Tones', category: 'Trends 2026', seed: 'earthy-interior-design' },
+                { title: 'Choosing the Right Finish', category: 'Expert Advice', seed: 'professional-painter-consultation' },
+                { title: 'Modern Minimalist Living', category: 'Decor Ideas', seed: 'minimalist-living-room-decor' },
               ].map((blog, idx) => (
                 <div key={idx} className="group cursor-pointer">
                   <div className="aspect-video rounded-2xl overflow-hidden mb-6">
-                    <img src={`https://images.unsplash.com/photo-1643148636639-c4f28543a5cc?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`} alt={blog.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <img src={`https://images.unsplash.com/photo-1643148636639-c4f28543a5cc`} alt={blog.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   </div>
                   <span className="text-xs font-bold text-red-600 uppercase tracking-widest mb-2 block">{blog.category}</span>
                   <h3 className="text-xl font-bold group-hover:text-red-600 transition-colors">{blog.title}</h3>
@@ -346,7 +358,6 @@ export default function App() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-20">
             <div className="lg:col-span-2">
               <div className="flex items-center gap-2 mb-8">
-                
                 <span className="text-2xl font-black tracking-tighter text-slate-900">PRISMA<span className="text-red-600"> PAINTS</span></span>
               </div>
               <p className="text-slate-500 mb-8 max-w-sm leading-relaxed">
