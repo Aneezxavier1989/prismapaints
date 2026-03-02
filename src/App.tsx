@@ -32,7 +32,7 @@ const NAV_LINKS = [
   { name: 'Paints & Coatings', items: ['Architectural', 'Industrial', 'Thinners', 'Track & Road', 'Specialty Coatings'] },
   { name: 'Services', items: ['Safe Painting Service', 'Color Consultancy', 'Industrial Coatings', 'Surface Preparation'] },
   { name: 'Solutions', items: ['Waterproofing', 'Heat Reflective', 'Anti-Corrosive', 'Road Marking'] },
-  { name: 'Inspiration', items: ['Visualize Colors', 'Decor Ideas', 'Expert Tips', 'Case Studies'] },
+  { name: 'Inspiration', items: ['Explore Colors', 'Decor Ideas', 'Expert Tips', 'Case Studies'] },
 ];
 
 const SERVICES = [
@@ -230,7 +230,7 @@ export default function App() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {[
-                { icon: <Palette className="text-red-600" />, title: 'Visualize Colors', desc: 'See colors on your walls' },
+                { icon: <Palette className="text-red-600" />, title: 'Explore Colors', desc: 'See colors on your walls' },
                 { icon: <Paintbrush className="text-blue-600" />, title: 'Painting Service', desc: 'Safe & hassle-free' },
                 { icon: <Droplets className="text-emerald-600" />, title: 'Paint Calculator', desc: 'Estimate your paint needs' },
                 { icon: <MapPin className="text-orange-600" />, title: 'Find a Dealer', desc: 'Locate stores near you' },
@@ -320,7 +320,7 @@ export default function App() {
                 Explore thousands of shades and see how our colors transform your walls.
               </p>
               <button className="bg-red-600 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-red-700 transition-all shadow-xl shadow-red-600/20">
-                Try Color Visualizer
+                Explore Colors
               </button>
             </div>
           </div>
