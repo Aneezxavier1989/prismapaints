@@ -329,7 +329,7 @@ export default function App() {
               ].map((blog, idx) => (
                 <div key={idx} className="group cursor-pointer">
                   <div className="aspect-video rounded-2xl overflow-hidden mb-6">
-                    <img src={`https://picsum.photos/seed/${blog.seed}/600/400`} alt={blog.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <img src={`https://images.unsplash.com/photo-1643148636639-c4f28543a5cc?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`} alt={blog.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   </div>
                   <span className="text-xs font-bold text-red-600 uppercase tracking-widest mb-2 block">{blog.category}</span>
                   <h3 className="text-xl font-bold group-hover:text-red-600 transition-colors">{blog.title}</h3>
@@ -346,7 +346,7 @@ export default function App() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-20">
             <div className="lg:col-span-2">
               <div className="flex items-center gap-2 mb-8">
-                <div className="w-10 h-10 rounded-lg bg-red-600 flex items-center justify-center text-white font-bold text-xl">P</div>
+                
                 <span className="text-2xl font-black tracking-tighter text-slate-900">PRISMA<span className="text-red-600"> PAINTS</span></span>
               </div>
               <p className="text-slate-500 mb-8 max-w-sm leading-relaxed">
