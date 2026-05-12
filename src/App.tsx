@@ -192,11 +192,13 @@ export default function App() {
       <main>
         {/* Hero Section */}
         <section className="relative h-[70vh] md:h-[80vh] overflow-hidden">
-          <img 
-            src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1920" 
-            alt="Elegant Modern Living Room Decor" 
+         <video
+            src="https://decodemedia.bh/wp-content/uploads/2026/05/banner-video-desktop.webm"
             className="w-full h-full object-cover"
-            referrerPolicy="no-referrer"
+            autoPlay
+            muted
+            loop
+            playsInline
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent" />
           <div className="absolute inset-0 flex items-center">
